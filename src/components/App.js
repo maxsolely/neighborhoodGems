@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { fetchGems } from '../actions'
 
 import GoogleMap from './GoogleMap'
-import PlacesList from './PlacesList'
+import GemsList from './GemsList'
 import styled from 'styled-components'
 
 
@@ -22,8 +22,8 @@ class App extends Component {
   }
 
   render() {
-    if (!this.state.lat) {
-      return <div>Loading</div>
+    if (!this.props.gems) {
+      return <div>Something</div>
     }
 
     return (
@@ -32,7 +32,7 @@ class App extends Component {
           center={{lat: this.state.lat, lng: this.state.lng}}
           zoom={11}
           /> */}
-        <PlacesList />
+        <GemsList />
       </Wrapper>
     )
   }
