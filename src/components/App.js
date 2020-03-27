@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import GoogleMap from './GoogleMap'
+import PlacesList from './PlacesList'
+import styled from 'styled-components'
+
 
 class App extends Component {
   state = {
@@ -19,14 +22,21 @@ class App extends Component {
     }
 
     return (
-      <div>
+      <Wrapper>
         <GoogleMap 
           center={{lat: this.state.lat, lng: this.state.lng}}
           zoom={11}
           />
-      </div>
+          <PlacesList/>
+      </Wrapper>
     )
   }
 }
 
 export default App
+
+const Wrapper = styled.section`
+width: 100vw;
+height: 100vh;
+display: flex;
+`
