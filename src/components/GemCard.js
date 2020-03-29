@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchGem } from '../actions/'
+import { fetchGem, castVote } from '../actions/'
 import styled from 'styled-components'
 
 class GemCard extends Component {
   componentDidMount() {
     this.props.fetchGem(this.props.gemId)
+  }
+
+  onClickHandler = (increment) => {
+    const { id, voteCount } = this.props.gem
+    this.props.castVote(id, voteCount, increment)
   }
 
   render() {
@@ -21,6 +26,8 @@ class GemCard extends Component {
         <h2>{name}</h2>
         <p>{formatted_address}</p>
         <p>{rating}</p>
+        <button onClick={() => this.onClickHandler(1)}>Upvote</button>
+        <button onClick={() => this.onClickHandler(-1)}>Downvote</button>
       </CardWrapper>
     )
   }
@@ -28,7 +35,7 @@ class GemCard extends Component {
 
 
 const CardWrapper = styled.div`
-  height: 15%;
+  height: 20%;
   width: 98%;
   margin: auto;
   border: 2px solid;
@@ -38,4 +45,4 @@ const mapStateToProps = (state, ownProps) => {
   return { gem: state.gems[ownProps.gemId] }
 }
 
-export default connect(mapStateToProps, { fetchGem })(GemCard)
+export default connect(mapStateToProps, { fetchGem, castVote })(GemCard)

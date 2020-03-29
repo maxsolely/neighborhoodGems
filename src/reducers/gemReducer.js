@@ -8,6 +8,9 @@ export default (state = {}, action) => {
     case 'FETCH_GEM':
       return { ...state, [action.payload.id]: action.payload }
 
+    case 'CAST_VOTE':
+      return { ...state, [action.payload.id]: action.payload }
+
     default:
       return state
   }
