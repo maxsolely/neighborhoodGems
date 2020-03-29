@@ -20,12 +20,13 @@ class GemCard extends Component {
       )
     }
 
-    const { formatted_address, name, rating } = this.props.gem
+    const { formatted_address, name, rating, voteCount } = this.props.gem
     return (
       <CardWrapper>
         <h2>{name}</h2>
         <p>{formatted_address}</p>
         <p>{rating}</p>
+        <p>{voteCount}</p>
         <button onClick={() => this.onClickHandler(1)}>Upvote</button>
         <button onClick={() => this.onClickHandler(-1)}>Downvote</button>
       </CardWrapper>
