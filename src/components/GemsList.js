@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
-import _ from 'lodash'
 import { connect } from 'react-redux'
 import { fetchGems } from '../actions'
 import GemCard from './GemCard'
@@ -31,19 +29,20 @@ class GemsList extends Component {
 
   render() {
     return (
-      <ListWrapper>
+      <div className="gems-list">
         {this.renderCards()}
-      </ListWrapper>
+      </div>
     )
   }
 }
 
-const ListWrapper = styled.div`
-  background: #eee5e9;
-  height: 100vh;
-  width: 30%;
-  padding: 5px
-`
+// const ListWrapper = styled.div`
+//   background: #eee5e9;
+//   height: 95vh;
+//   width: 30%;
+//   padding: 5px;
+//   overflow: auto
+// `
 
 const mapStateToProps = state => {
   return { gems: state.gems }

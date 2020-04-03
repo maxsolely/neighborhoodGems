@@ -1,0 +1,201 @@
+.app-main-section {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+  height: 95vh;
+  margin-top: 50px;
+  margin-right: 4vw;
+  margin-left: auto;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.app-body {
+  padding: 20px;
+  background-color: #eae2ce;
+  font-family: Overpass, sans-serif;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/Screen-Shot-2020-04-03-at-9.25.38-AM.png');
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.gems-list {
+  position: absolute;
+  left: auto;
+  top: 8vh;
+  right: 1vw;
+  bottom: auto;
+  width: 25%;
+  padding: 10px;
+}
+
+.app-gem-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 35vh;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  border-radius: 10px;
+  background-color: #eef4ed;
+  box-shadow: 0 2px 7px 0 #383d3b;
+  opacity: 1;
+}
+
+.navbar {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: auto;
+  bottom: auto;
+  height: 5%;
+  width: 100%;
+  background-color: #e08c75;
+}
+
+.app-gem-info-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 85%;
+  height: 100%;
+  margin-top: 0px;
+  padding: 20px 10px 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.grid {
+  -ms-grid-columns: 0.5fr 1fr 0.25fr;
+  grid-template-columns: 0.5fr 1fr 0.25fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+
+.heading {
+  font-family: Chivo, sans-serif;
+  color: #544931;
+}
+
+.app-gem-name {
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 7px;
+  font-family: Chivo, sans-serif;
+  color: #544931;
+  font-size: 1.5vw;
+}
+
+.app-gem-desc-icons-container {
+  margin-bottom: 5px;
+}
+
+.app-button-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 15%;
+  height: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.button {
+  width: 30%;
+}
+
+.votebutton {
+  width: 30%;
+  height: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 10px;
+  background-color: #e08c75;
+  color: #544931;
+  text-align: center;
+}
+
+.votebutton.downvote {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e08c75;
+  background-color: transparent;
+}
+
+.app-vote-count {
+  color: #544931;
+  font-size: 1vw;
+}
+
+.app-gem-image {
+  width: 100%;
+  height: 50%;
+}
+
+.app-gem-content-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 50%;
+}
+
+.app-gem-desc {
+  font-size: 1vw;
+  margin-top: 8px;
+}
+
+.app-vote-button {
+  cursor: pointer;
+}
+
+.app-gem-type-icon {
+  padding-right: 10px;
+}
